@@ -9,3 +9,6 @@ I had issues trying to set up the virtual environment like authors recommended, 
 | Character Accuracy  |  Word Accuracy |
 |---|---|
 |95.42   |  0.78 |
+
+## Part 2: Part 2 – Using Our New Data (8 points)
+
