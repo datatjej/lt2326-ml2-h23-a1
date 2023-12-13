@@ -26,10 +26,12 @@ Even after adjusting the dataset and training as well as evaluating the model, I
 It's intriguing that the prediction is only 1-2 character long. I'm guessing there are still adjustments in the code that need to be made (maybe prediction size needs to be set somewhere?), so it's hard to do a fair error analysis. At first I thought I might have corrupted the images while making them smaller, but they still seem readible. Maybe the fact that the dataset is pretty small (around 200 images) explains at least partly the bad results. Since many, but not all, of the pictures are taken from skewed angles, data augmentation with the existing images, e.g. skewing the straight images as well to increase the variance in the dataset, might improve results further.
 
 ## Part 5 - Exploring New Architectures
-This part made me revisit the argument input to the model for training, and made me realize one issue all along can have been that: epoch (8) x batch_size (12) < train set size! Increasing no of epochs to 13 improved performance by more than double:
+This part made me revisit the argument input to the model for training, making me realize one issue all along could have been that: epoch (8) x batch_size (12) < train set size! Increasing no of epochs to 13 improved performance by more than double:
 
 ![part2 results](https://github.com/datatjej/lt2326-ml2-h23-a1/blob/main/part2_results_2.png)
 
 | Character Accuracy  |  Word Accuracy |
 |---|---|
 |14.48  |  0.00 |
+
+I didn't manage to change the no of hidden dimensions without getting errors, but I did experiment with the alphabet input (changing it to: `"""0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"""`) to see if that would help the model further. I would have thought that it would since it decreased the number of possible classes and the complexity of the task. But the character accuracy stayed at around 14 % without further improvement.
