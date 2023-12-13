@@ -1,6 +1,8 @@
 # lt2326-ml2-h23-a1
 Car Plate Recognition
 
+Repo of original notebook: https://github.com/Deepayan137/Adapting-OCR (Das & Jawahar)
+
 ## Part 1: Basic Implementation
 I had issues trying to set up the virtual environment like authors recommended, using the env.txt file. It complained about conflicting dependencies and what not. I ended up pip installing the requirements.txt file, but with later versions of many of the dependencies. Running the code as is (with minor tweaks) gave me following results:
 
