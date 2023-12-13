@@ -28,6 +28,8 @@ It's intriguing that the prediction is only 1-2 character long. I'm guessing the
 ## Part 5 - Exploring New Architectures
 This part made me revisit the argument input to the model for training, and made me realize one issue all along can have been that: epoch (8) x batch_size (12) < train set size! Increasing no of epochs to 13 improved performance by more than double:
 
+![part2 results](https://github.com/datatjej/lt2326-ml2-h23-a1/blob/main/part2_results_2.png)
+
 | Character Accuracy  |  Word Accuracy |
 |---|---|
 |14.48  |  0.00 |
